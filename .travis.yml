@@ -15,20 +15,20 @@ script:
 - mvn clean package
 - git add .
 - mvn deploy
-- git add . 
+- git add .
 - git config --global user.email ${GIT_EMAIL}
 - git config --global user.name ${GIT_NAME}
 - git commit -m "calculadora-lib-gcm - commit da build travis"
-- git push -fq https://hivanamcd:${GH_TOKEN}@github.com/hivanamcd/calculadora-lib-gcm.git master
-
-env:
-  global:
-    secure: WembF1w7EwFQJWwJ7NMRHfPm7UTpsS1iX5gmccJpfy4liTHeDWJCfTpPEtG9qRyTsmpNc8oya8EMUG+Tj9cxobouXxDjVyNo4tgFVGItG2Meqps6roz3hh3GlPE23RDDsoi4C7qD1i8LR0AJP4Bowa8WTHjPOKym/pMqJModbqw=
-
-after_success: 
-- BUILD_NBR=$((TRAVIS_JOB_ID - 1)) 
+- git push -fq https://hivanamcd:${GH_TOKEN}@github.com/hivanamcd/calculadora-lib-gcm.git
+  master
+after_success:
+- BUILD_NBR=$((TRAVIS_JOB_ID - 1))
 - echo "Build Number > '${BUILD_NBR}'"
 - git config --global user.email ${GIT_EMAIL}
 - git config --global user.name ${GIT_NAME}
 - git tag -a ${BUILD_NBR} -m "Tag travis"
-- git push https://hivanamcd:${GH_TOKEN}@github.com/hivanamcd/calculadora-lib-gcm.git --tags
+- git push https://hivanamcd:${GH_TOKEN}@github.com/hivanamcd/calculadora-lib-gcm.git
+  --tags
+env:
+  global:
+    secure: TbpuN0tYc5m/Md2SiiWE1O2peZi8hSUb/9Auu4/+WlA9Phna15rEBpEg69hlPD5vMcrQHUdEkQRHE0+TN2rXBlaeu5ZuwnetcrcVUyB7dnn9if1V8tKTd72e62MYp3Gk480qs5qYbKjPOFRJvUJmSuuJKXGFRsvnc9o/slfQLK4=
