@@ -18,8 +18,8 @@ script:
 - git add .
 - git config --global user.email ${GIT_EMAIL}
 - git config --global user.name ${GIT_NAME}
-- git commit -m "calculadora-lib-gcm - commit da build travis"
-- git push -fq https://hivanamcd:${GH_TOKEN}@github.com/hivanamcd/calculadora-lib-gcm.git
+- git commit -m "lib-calculadora - commit da build travis"
+- git push -fq https://hivanamcd:${GH_TOKEN}@github.com/hivanamcd/lib-calculadora.git
   master
 after_success:
 - BUILD_NBR=$((TRAVIS_JOB_ID - 1))
@@ -27,8 +27,8 @@ after_success:
 - git config --global user.email ${GIT_EMAIL}
 - git config --global user.name ${GIT_NAME}
 - git tag -a ${BUILD_NBR} -m "Tag travis"
-- git push https://hivanamcd:${GH_TOKEN}@github.com/hivanamcd/calculadora-lib-gcm.git
+- git push https://hivanamcd:${GH_TOKEN}@github.com/hivanamcd/lib-calculadora.git
   --tags
 env:
   global:
-    secure: TbpuN0tYc5m/Md2SiiWE1O2peZi8hSUb/9Auu4/+WlA9Phna15rEBpEg69hlPD5vMcrQHUdEkQRHE0+TN2rXBlaeu5ZuwnetcrcVUyB7dnn9if1V8tKTd72e62MYp3Gk480qs5qYbKjPOFRJvUJmSuuJKXGFRsvnc9o/slfQLK4=
+    secure: YKc6a9Gr9Qvpm2khy8ZmqwQnY8R380imPCJFJYqPJwiHL74F3WgTbe76VPLuhiZKr+rvlmfQx98f79wTZ/hWwfiI2eb2Gb+CX73wcR4G+1dvF68q6HagBs0vYxIYn6phRgUvXvi/gQqoROEs//m9/BYid/iaq9gnw5aQwo6aO/4=
