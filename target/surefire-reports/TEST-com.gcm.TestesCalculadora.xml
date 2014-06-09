@@ -60,9 +60,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.005" classname="com.gcm.TestesCalculadora" name="testeSubtraicao"/>
+  <testcase time="0.007" classname="com.gcm.TestesCalculadora" name="testeSubtraicao"/>
   <testcase time="0" classname="com.gcm.TestesCalculadora" name="testeSoma"/>
-  <testcase time="0.023" classname="com.gcm.TestesCalculadora" name="testeDivisao">
+  <testcase time="0.022" classname="com.gcm.TestesCalculadora" name="testeDivisao">
     <failure message="expected:&lt;-2&gt; but was:&lt;1&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;-2&gt; but was:&lt;1&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:743)
@@ -102,5 +102,5 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
   </testcase>
-  <testcase time="0.001" classname="com.gcm.TestesCalculadora" name="testeMultiplicacao"/>
+  <testcase time="0" classname="com.gcm.TestesCalculadora" name="testeMultiplicacao"/>
 </testsuite>
